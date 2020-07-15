@@ -61,10 +61,10 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
         ";
         // line 9
         $this->displayBlock('body', $context, $blocks);
-        // line 18
+        // line 22
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 19
+        // line 23
         echo "    </body>
 </html>
 ";
@@ -127,25 +127,38 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
         echo "            ";
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
-            ";
+            veuillez saisir le premier nombre  : ";
         // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'widget');
-        echo "
-            ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), "firstNumber", [], "any", false, false, false, 11), 'widget');
+        echo " <br>
+            veuillez choisir une opération     : ";
         // line 12
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_end');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), "operand", [], "any", false, false, false, 12), 'widget');
+        echo " <br>
+            veuillez saisir le deuxieme nombre : ";
+        // line 13
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "secondNumber", [], "any", false, false, false, 13), 'widget');
+        echo "<br>
+                                                 ";
+        // line 14
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), "Calculate", [], "any", false, false, false, 14), 'widget');
+        echo "<br>
+
+            ";
+        // line 16
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_end');
         echo "
 
             ";
-        // line 14
+        // line 18
         if ((isset($context["result"]) || array_key_exists("result", $context))) {
-            // line 15
-            echo "                <p> Result: ";
-            echo twig_escape_filter($this->env, (isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new RuntimeError('Variable "result" does not exist.', 15, $this->source); })()), "html", null, true);
+            // line 19
+            echo "                <p> Resultat = ";
+            echo twig_escape_filter($this->env, (isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new RuntimeError('Variable "result" does not exist.', 19, $this->source); })()), "html", null, true);
             echo " </p>
             ";
         }
-        // line 17
+        // line 21
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -155,7 +168,7 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
 
     }
 
-    // line 18
+    // line 22
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -180,7 +193,7 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
 
     public function getDebugInfo()
     {
-        return array (  159 => 18,  149 => 17,  143 => 15,  141 => 14,  136 => 12,  132 => 11,  127 => 10,  117 => 9,  99 => 6,  80 => 5,  68 => 19,  65 => 18,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  172 => 22,  162 => 21,  156 => 19,  154 => 18,  149 => 16,  144 => 14,  140 => 13,  136 => 12,  132 => 11,  127 => 10,  117 => 9,  99 => 6,  80 => 5,  68 => 23,  65 => 22,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -195,11 +208,15 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
     <body>
         {% block body %}
             {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-            {{ form_widget(form) }}
+            veuillez saisir le premier nombre  : {{ form_widget(form.firstNumber) }} <br>
+            veuillez choisir une opération     : {{ form_widget(form.operand) }} <br>
+            veuillez saisir le deuxieme nombre : {{ form_widget(form.secondNumber) }}<br>
+                                                 {{ form_widget(form.Calculate) }}<br>
+
             {{ form_end(form) }}
 
             {% if result is defined %}
-                <p> Result: {{ result }} </p>
+                <p> Resultat = {{ result }} </p>
             {% endif %}
         {% endblock %}
         {% block javascripts %}{% endblock %}
