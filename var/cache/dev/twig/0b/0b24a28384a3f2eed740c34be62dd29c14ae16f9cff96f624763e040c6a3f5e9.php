@@ -86,7 +86,7 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Simple Calculator";
+        echo "Calculatrice";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -202,7 +202,7 @@ class __TwigTemplate_98fac1396d464ed2ab97e8ee34e100a3e513b8ed838a25cb4b64e2c45d4
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Simple Calculator{% endblock %}</title>
+        <title>{% block title %}Calculatrice{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
