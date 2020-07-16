@@ -16,6 +16,7 @@ class UserTest extends TestCase
      $user->setLastName('bellifa');
      $user->setAge('13');
      $user->setEmail('osm@live.fr');
+
      $this->assertNotEmpty($user->getFirstName());
      $this->assertNotEmpty($user->getLastName());
      $this->assertEquals('oussama',$user->getFirstName());
@@ -34,7 +35,7 @@ class UserTest extends TestCase
      if( empty($user->getLastName()) || count_chars($user->getLastName()) < 3 ){
        return "lastName is not valid ";
      }
-     if( empty($user->getAge()) || $user->getAge() < 13 ){
+     if( empty($user->getAge()) || !is_integer($user->getAge()) || $user->getAge() < 13 ){
        return "age is not valid ";
      }
      $expression = "/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/"  ;
