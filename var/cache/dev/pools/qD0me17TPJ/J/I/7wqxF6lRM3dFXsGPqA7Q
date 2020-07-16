@@ -13,7 +13,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 '/delete_user/{id}',
             ],
             'name' => [
-                'user_delete',
+                'delete',
             ],
         ],
         'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [

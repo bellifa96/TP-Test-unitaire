@@ -66,6 +66,13 @@ class __TwigTemplate_379094bc67ae8da11fab4e1cc449383fc478b0ac68245eb967d7e496ef3
         $this->displayBlock('javascripts', $context, $blocks);
         // line 11
         echo "    </body>
+    <a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_list");
+        echo "\">user list</a>
+
+
+
 </html>
 ";
         
@@ -154,9 +161,14 @@ class __TwigTemplate_379094bc67ae8da11fab4e1cc449383fc478b0ac68245eb967d7e496ef3
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  135 => 10,  117 => 9,  99 => 6,  80 => 5,  68 => 11,  65 => 10,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  142 => 10,  124 => 9,  106 => 6,  87 => 5,  71 => 12,  68 => 11,  65 => 10,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -172,7 +184,11 @@ class __TwigTemplate_379094bc67ae8da11fab4e1cc449383fc478b0ac68245eb967d7e496ef3
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
+    <a href=\"{{ path('user_list') }}\">user list</a>
+
+
+
 </html>
-", "base.html.twig", "/home/ouss/Project/templates/base.html.twig");
+", "base.html.twig", "/home/ouss/tp-TUnit-User/templates/base.html.twig");
     }
 }

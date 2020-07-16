@@ -101,13 +101,13 @@ class __TwigTemplate_cf34e40e8873847ceb53ac9f86c9016bde9b0fb07d514292be325a6d765
             echo "                <a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 15)]), "html", null, true);
             echo "\">Delete</a>
-                <a href=\"";
+               <a href=\"";
             // line 16
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_update_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 16)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_app_user_update", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 16)]), "html", null, true);
             echo "\">update</a>
 
 
-            <span>User :</span>
+                <span>User :</span>
                 <li>first name : ";
             // line 20
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "getFirstName", [], "any", false, false, false, 20), "html", null, true);
@@ -128,6 +128,10 @@ class __TwigTemplate_cf34e40e8873847ceb53ac9f86c9016bde9b0fb07d514292be325a6d765
             // line 24
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "getCreatedAt", [], "any", false, false, false, 24), "d/m/Y"), "html", null, true);
             echo "
+                    role: ";
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "getRoles", [], "any", false, false, false, 25), 0, [], "array", false, false, false, 25), "html", null, true);
+            echo "
                 </li>
 
 
@@ -136,7 +140,7 @@ class __TwigTemplate_cf34e40e8873847ceb53ac9f86c9016bde9b0fb07d514292be325a6d765
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 30
         echo "        </ul>
 
     </div>
@@ -162,7 +166,7 @@ class __TwigTemplate_cf34e40e8873847ceb53ac9f86c9016bde9b0fb07d514292be325a6d765
 
     public function getDebugInfo()
     {
-        return array (  140 => 29,  129 => 24,  125 => 23,  121 => 22,  117 => 21,  113 => 20,  106 => 16,  101 => 15,  97 => 14,  88 => 7,  78 => 6,  59 => 4,  36 => 2,);
+        return array (  144 => 30,  133 => 25,  129 => 24,  125 => 23,  121 => 22,  117 => 21,  113 => 20,  106 => 16,  101 => 15,  97 => 14,  88 => 7,  78 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -182,15 +186,16 @@ class __TwigTemplate_cf34e40e8873847ceb53ac9f86c9016bde9b0fb07d514292be325a6d765
         <ul>
             {% for user in users %}
                 <a href=\"{{ path('user_delete',{'id': user.id}) }}\">Delete</a>
-                <a href=\"{{ path('admin_update_user',{'id': user.id}) }}\">update</a>
+               <a href=\"{{ path('user_app_user_update',{'id':user.id}) }}\">update</a>
 
 
-            <span>User :</span>
+                <span>User :</span>
                 <li>first name : {{ user.getFirstName }}
                     last name :{{ user.getLastName }}
                     email : {{ user.getEmail }}
                     Birthday: {{ user.getBirthDate|date('d/m/Y') }}
                     created at : {{ user.getCreatedAt|date('d/m/Y')  }}
+                    role: {{ user.getRoles[0] }}
                 </li>
 
 
@@ -201,6 +206,6 @@ class __TwigTemplate_cf34e40e8873847ceb53ac9f86c9016bde9b0fb07d514292be325a6d765
 
 {% endblock %}
 
-", "user/index.html.twig", "/app/templates/user/index.html.twig");
+", "user/index.html.twig", "/var/www/project/templates/user/index.html.twig");
     }
 }

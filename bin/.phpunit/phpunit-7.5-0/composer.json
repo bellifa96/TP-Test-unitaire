@@ -53,9 +53,6 @@
         "phpunit/phpunit-mock-objects": "*"
     },
     "config": {
-        "platform": {
-
-        },
         "optimize-autoloader": true,
         "sort-packages": true
     },
@@ -91,7 +88,7 @@
     "repositories": {
         "phpunit-bridge": {
             "type": "path",
-            "url": "/home/ouss/tp-testes-unitaires/vendor/symfony/phpunit-bridge"
+            "url": "/home/ouss/tp-TUnit-User/vendor/symfony/phpunit-bridge"
         }
     }
 }

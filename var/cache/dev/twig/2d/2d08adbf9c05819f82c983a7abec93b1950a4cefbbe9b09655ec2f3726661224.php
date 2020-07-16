@@ -91,29 +91,33 @@ class __TwigTemplate_71e0ada33c6fbf39d7a12c357d973f5268303128e4e78541a89fe410b52
     </style>
 
     <div class=\"example-wrapper\">
-        <ul>
-                <span>Mon profile :</span>
-                <li>first name : ";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "getFirstName", [], "any", false, false, false, 15), "html", null, true);
-        echo "
-                    last name :";
+        <ul>    <a href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_app_user_update", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), "id", [], "any", false, false, false, 13)]), "html", null, true);
+        echo "\">update</a>
+
+          <span>Mon profile :</span>
+            <li>first name : ";
         // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "getLastName", [], "any", false, false, false, 16), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "getFirstName", [], "any", false, false, false, 16), "html", null, true);
         echo "
-                    email : ";
+                last name :";
         // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17), "getEmail", [], "any", false, false, false, 17), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17), "getLastName", [], "any", false, false, false, 17), "html", null, true);
         echo "
-                    Birthday: ";
+                email : ";
         // line 18
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18), "getBirthDate", [], "any", false, false, false, 18), "d/m/Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18), "getEmail", [], "any", false, false, false, 18), "html", null, true);
         echo "
-                    created at : ";
+                Birthday: ";
         // line 19
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "getCreatedAt", [], "any", false, false, false, 19), "d/m/Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "getBirthDate", [], "any", false, false, false, 19), "d/m/Y"), "html", null, true);
         echo "
-                </li>
+                created at : ";
+        // line 20
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "getCreatedAt", [], "any", false, false, false, 20), "d/m/Y"), "html", null, true);
+        echo "
+            </li>
 
 
         </ul>
@@ -141,7 +145,7 @@ class __TwigTemplate_71e0ada33c6fbf39d7a12c357d973f5268303128e4e78541a89fe410b52
 
     public function getDebugInfo()
     {
-        return array (  114 => 19,  110 => 18,  106 => 17,  102 => 16,  98 => 15,  88 => 7,  78 => 6,  59 => 4,  36 => 2,);
+        return array (  118 => 20,  114 => 19,  110 => 18,  106 => 17,  102 => 16,  96 => 13,  88 => 7,  78 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -158,14 +162,15 @@ class __TwigTemplate_71e0ada33c6fbf39d7a12c357d973f5268303128e4e78541a89fe410b52
     </style>
 
     <div class=\"example-wrapper\">
-        <ul>
-                <span>Mon profile :</span>
-                <li>first name : {{ app.user.getFirstName }}
-                    last name :{{ app.user.getLastName }}
-                    email : {{ app.user.getEmail }}
-                    Birthday: {{ app.user.getBirthDate|date('d/m/Y') }}
-                    created at : {{ app.user.getCreatedAt|date('d/m/Y')  }}
-                </li>
+        <ul>    <a href=\"{{ path('user_app_user_update',{'id':app.user.id}) }}\">update</a>
+
+          <span>Mon profile :</span>
+            <li>first name : {{ app.user.getFirstName }}
+                last name :{{ app.user.getLastName }}
+                email : {{ app.user.getEmail }}
+                Birthday: {{ app.user.getBirthDate|date('d/m/Y') }}
+                created at : {{ app.user.getCreatedAt|date('d/m/Y')  }}
+            </li>
 
 
         </ul>

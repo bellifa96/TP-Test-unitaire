@@ -139,6 +139,6 @@ class __TwigTemplate_22c5c06f89561c769225844a290c64578dc641916edab4584b823602c4d
 
 {% endblock %}
 
-", "user/new.html.twig", "/app/templates/user/new.html.twig");
+", "user/new.html.twig", "/var/www/project/templates/user/new.html.twig");
     }
 }

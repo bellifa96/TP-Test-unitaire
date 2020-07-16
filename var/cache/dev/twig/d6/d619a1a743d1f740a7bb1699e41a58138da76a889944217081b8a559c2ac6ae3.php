@@ -156,6 +156,6 @@ class __TwigTemplate_23687b9646bdad825da47825839387541062594958c36127174e0da630c
     <h2>{{ messages[about].title }}</h2>
     <p>{{ messages[about].message }}</p>
 {% endblock %}
-", "@WebProfiler/Profiler/info.html.twig", "/app/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/info.html.twig");
+", "@WebProfiler/Profiler/info.html.twig", "/var/www/project/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/info.html.twig");
     }
 }

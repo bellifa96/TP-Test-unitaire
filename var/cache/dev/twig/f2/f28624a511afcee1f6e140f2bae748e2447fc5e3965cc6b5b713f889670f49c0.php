@@ -299,6 +299,6 @@ class __TwigTemplate_1991131e02fc531cda6905a33f99060c01d575a832fbe4b1dab8e639003
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "/app/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
+", "form_table_layout.html.twig", "/var/www/project/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
     }
 }

@@ -32,7 +32,7 @@ class CoverageListenerTrait
     {
         $this->sutFqcnResolver = $sutFqcnResolver;
         $this->warningOnSutNotFound = $warningOnSutNotFound;
-        $this->warnings = [];
+        $this->warnings = array();
     }
 
     public function startTest($test)
@@ -43,7 +43,7 @@ class CoverageListenerTrait
 
         $annotations = $test->getAnnotations();
 
-        $ignoredAnnotations = ['covers', 'coversDefaultClass', 'coversNothing'];
+        $ignoredAnnotations = array('covers', 'coversDefaultClass', 'coversNothing');
 
         foreach ($ignoredAnnotations as $annotation) {
             if (isset($annotations['class'][$annotation]) || isset($annotations['method'][$annotation])) {
@@ -69,21 +69,12 @@ class CoverageListenerTrait
         $r = new \ReflectionProperty(Test::class, 'annotationCache');
         $r->setAccessible(true);
 
-        $covers = $sutFqcn;
-        if (!\is_array($sutFqcn)) {
-            $covers = [$sutFqcn];
-            while ($parent = get_parent_class($sutFqcn)) {
-                $covers[] = $parent;
-                $sutFqcn = $parent;
-            }
-        }
-
         $cache = $r->getValue();
-        $cache = array_replace_recursive($cache, [
-            \get_class($test) => [
-                'covers' => $covers,
-            ],
-        ]);
+        $cache = array_replace_recursive($cache, array(
+            \get_class($test) => array(
+                'covers' => \is_array($sutFqcn) ? $sutFqcn : array($sutFqcn),
+            ),
+        ));
         $r->setValue(Test::class, $cache);
     }
 

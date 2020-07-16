@@ -15,5 +15,11 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
-    'calculator' => [[], ['_controller' => 'App\\Controller\\CalculatorController::calculate'], [], [['text', '/calculator']], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
+    'user_profile' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/user/profile']], [], []],
+    'user_list' => [[], ['_controller' => 'App\\Controller\\UserController::usersList'], [], [['text', '/user/list']], [], []],
+    'user_new' => [[], ['_controller' => 'App\\Controller\\UserController::newAction'], [], [['text', '/user/new']], [], []],
+    'user_delete' => [['id'], ['_controller' => 'App\\Controller\\UserController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user/delete_user']], [], []],
+    'user_app_user_update' => [['id'], ['_controller' => 'App\\Controller\\UserController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user/update']], [], []],
 ];
